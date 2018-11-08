@@ -1,0 +1,128 @@
+body {
+    min-height: 90vh;
+}
+
+.flash-card {
+    width: 100%;
+    box-shadow: 0px 0px 1px 1px #ccc;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 15em;
+    transition: all ease 0.5s;
+    transform-style: preserve-3d;
+}
+
+.flash-card p {
+    font-weight: 500;
+    color: dodgerblue;
+    max-height: 100%;
+    overflow: auto;
+    position: relative;
+}
+
+.flash-card .back {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    z-index: 1;
+    transition: all ease 0.3s;
+    transform: rotateX(180deg);
+}
+
+.flash-card .front {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    transition: all ease 0.3s;
+}
+
+.flip {
+    transform: rotateX(180deg);
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+.slider .slide-content {
+    width: 100%;
+    min-height: 15em;
+    position: relative;
+}
+
+.slider .slide-content .slide-item {
+    display: none;
+    transition: 0.3s;
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slider .slide-content .slide-item.current {
+    display: block !important;
+}
+
+.slider .slide-content .slide-item.previous {
+    display: flex;
+    opacity: 0;
+    transform: translateX(-16%) rotateY(16deg) translateZ(0);
+    pointer-events: none;
+}
+
+.slider .slide-content .slide-item.next {
+    display: flex;
+    opacity: 0;
+    transform: translateX(16%) rotateY(16deg) translateZ(0);
+    pointer-events: none;
+}
+
+.slider .slide-controls {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .slide-controls .item-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    width: 2em;
+    height: 2em;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.slider .slide-controls .item-control i {
+    color: cyan;
+}
+
+.slider .slide-controls .item-control.disable {
+    pointer-events: none;
+}
+
+.slider .slide-controls .item-control.disable i {
+    color: black;
+}
+
+.slider .slide-controls .item-control:focus {
+    outline: none;
+}
+
+.slider .slide-controls .item-control:hover {
+    background-color: yellow;
+}
+
+.slider .slide-controls .item-control:hover i {
+    color: gray;
+}
