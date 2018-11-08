@@ -24,7 +24,10 @@ body {
 
 .flash-card .back {
     width: 100%;
-    text-align: center;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
     background-color: white;
     z-index: 1;
     transition: all ease 0.3s;
@@ -33,7 +36,10 @@ body {
 
 .flash-card .front {
     width: 100%;
-    text-align: center;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
     background-color: white;
     position: absolute;
     z-index: 2;
