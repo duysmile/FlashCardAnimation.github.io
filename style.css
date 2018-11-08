@@ -4,7 +4,7 @@ body {
 
 .flash-card {
     width: 100%;
-    box-shadow: 0px 0px 1px 1px #ccc;
+    box-shadow: 0 0 1px 1px #ccc;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -15,35 +15,29 @@ body {
 }
 
 .flash-card p {
+    width: 100%;
+    height: 100%;
     font-weight: 500;
     color: dodgerblue;
     max-height: 100%;
     overflow: auto;
     position: relative;
-}
-
-.flash-card .back {
-    width: 100%;
-    height: 100%;
     justify-content: center;
     display: flex;
     align-items: center;
     background-color: white;
     z-index: 1;
     transition: all ease 0.3s;
+    margin: 0;
+}
+
+.flash-card .back {
+    position: absolute;
     transform: rotateX(180deg);
 }
 
 .flash-card .front {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    background-color: white;
-    position: absolute;
     z-index: 2;
-    transition: all ease 0.3s;
 }
 
 .flip {
