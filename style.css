@@ -24,7 +24,6 @@ body {
     display: flex;
     align-items: center;
     background-color: white;
-    z-index: 1;
     transition: all ease 0.3s;
     margin: 0;
     position: absolute;
@@ -32,10 +31,6 @@ body {
 
 .flash-card .back {
     transform: rotateX(180deg);
-}
-
-.flash-card .front {
-    z-index: 2;
 }
 
 .flip {
